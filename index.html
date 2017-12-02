@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Generate QRCode</title>
+</head>
+<body>
+	<div id="qrcode"></div>
+	<script src="js/qrcode.min.js"></script>
+	<script>
+		//new QRCode(document.getElementById('qrcode'), 'http://www.diogocezar.com');
+		new QRCode(document.getElementById('qrcode'), {
+			text: 'testing',
+			width: 300,
+			height: 300,
+			colorDark : '#ff0000',
+			colorLight : '#ffffff',
+			correctLevel: QRCode.CorrectLevel.H
+		});
+	</script>
+</body>
+</html>
