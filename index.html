@@ -5,13 +5,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Generate QRCode</title>
 </head>
-<body>
+<body>	<div>
+		<input id="QRDATA" class="form-control" value="Hakuna Matata" style="text-align: center;">
+	</div>
 	<div id="qrcode"></div>
 	<script src="js/qrcode.min.js"></script>
 	<script>
-		//new QRCode(document.getElementById('qrcode'), 'http://www.diogocezar.com');
+		var
 		new QRCode(document.getElementById('qrcode'), {
-			text: 'https://oliveira-gabriel.github.io/qrcode/',
+			text:document.getElementById("QRDATA").value ,
 			width: 300,
 			height: 300,
 			colorDark : '#ff0000',
